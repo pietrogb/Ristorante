@@ -1,0 +1,53 @@
+1	Caciofiore della Campagna Romana, Marzolina e Formaggio Grigio, con composta di pere alla cannella	12.00
+2	Couscous in insalata invernale con gamberetti	9.00
+3	Insalatina con uva, noci, melograno ed anatra marinata	10.00
+4	Stracciatella di bufala, pomodori alla Provenzale e crumble di pane all’origano di Sicilia	10.00
+5	Pate' di fegatini, fatto in casa, con crostini	10.00
+6	Clafoutis di carciofi	8.00
+7	Indivia brasata, bagna caoda gentile e foglie di pane	9.00
+8	Straccetti di grano duro con broccolo al vino e salsa di acciughe	12.00
+9	Casarecce con zucca, gorgonzola, semi di zucca e papavero	12.00
+10	Linguine con ragu' di mare (pescato del giorno e salsa di pomodoro fresco)	13.00
+11	Casarecce con crema di Borlotti, cozze e spolvero di Marzolina	13.00
+12	Spaghetti con pancetta e fonduta di Reggiano allo Zafferano	13.00
+13	Spaghetti con Tapenade e pomodorini confit	10.00
+14	Mezze maniche con ragu' di cinghiale e Reggiano	12.00
+15	Vellutata di zucca, rape bianche e porri	9.00
+16	Julienne di faraona al profumo di arancia con verdure di stagione	16.00
+17	Pollo piccante con salsa Tandoori e tortino di riso	16.00
+18	Magro di Maiale alla Mazio con purea di mele e verdure di stagione (Antica ricetta della Roma dei Cesari)	18.00
+19	Filetto di vitello alla griglia con verdure di stagione o patate arrosto	26.00
+20	Polpettine di vitello con pomodoro, olive, capperi e verdure di stagione	16.00
+21	Creme Brulee	9.00
+22	Declinazioni di cioccolato. Torta di mandorle e cioccolato al  peperoncino banana.	12.00
+23	Cestino croccante di mandorle e miele con crema di ricotta alla cannella	9.00
+24	Panna cotta alla lavanda con mousse di pistacchi	9.00
+25	Parfait al torroncino con salsa all'Amaretto	9.00
+26	Sorbetto di clementini	8.00
+27	Crema inglese alla vaniglia, crumble di mandorle e gelo di sambuco	9.00
+28	Acqua 1 lt.	1.50
+29	Bibita in lattina	2.00
+30	Birra 0.2 lt	2.50
+31	Birra 0.4 lt	5.00
+32	Birra bottiglia	3.50
+33	Succo di frutta	2.00
+34	Caffe'	1.00
+35	Caffe' corretto	1.30
+36	Cappuccino	1.30
+37	Camomilla	1.00
+38	Sorbetto al limone	2.00
+39	Amari	2.50
+40	Spaghetti al nero di seppia con frutti di mare e pomodorini	10.00
+41	Cavatelli con cozze su crema di zucchine	11.00
+42	Spaghetti alle alici	6.50
+43	Risotto con rombo e fiori di zucca	9.50
+44	Pasta con Pesce Spada e zucca	12.00
+45	Gamberoni agli Agrumi	12.00
+46	Pasta alle Vongole	8.50
+47	Verdure di stagione alla griglia	6.00
+48	Pinzimonio	6.00
+49	Patate arrosto	4.00
+51	Patate fritte	4.00
+52	Insalata mista	4.00
+53	Erbette di Campagna	6.00
+54	Piadina vuota fatta in casa	1.50

@@ -1,0 +1,84 @@
+<?php
+  require("libreria.php");
+  
+$login=authenticate() or header("Location: home.php");
+if (isset($_SESSION['logged']))
+{
+  inizio_pagina("Ma certo! Ristorante");
+  subtitle("Inserisci una nuova prenotazione");
+  $conn=dbConnect();
+  
+  if(isset($_POST['submit'])){
+    $n=0;  
+    $pl=$_POST['nporz'];
+    foreach($pl as $d)
+      $n+=$d;
+    if($n!=0){
+      //leggi i dati del cliente
+      //crea la prenotazione in Prenotazioni
+      //poi inserisci ogni piatto in PrenotazioniPiatti
+      $dataP=$_POST['sday'];
+      $np=$_POST['npers'];
+      $aid=mysql_query("select Id from Utenti where Login='$login'",$conn);
+      $did=mysql_fetch_array($aid);
+      $idcliente=$did[0];
+      $idpr=creapren($idcliente,$dataP,$np) or $err="impossibile inserire la prenotazione corrente";
+      if(!isset($err)){
+	$cods=$_POST['ids'];
+	$i=0;
+	foreach($pl as $num){
+	  if($num>0){
+	    $codpiatto=$cods[$i];
+	    $query="insert into PrenotazioniPiatti values($idpr,$codpiatto,$num)";
+	    mysql_query($query,$conn) or $err="errore d'un piatto all'interno della prenotazione";
+	    if(isset($err)) echo"$err";
+	  }
+	  $i++;
+	}
+	//mysql_query($query_el,$conn) or $err="impossibile inserire la prenotazione corrente; reinserire i dati";
+	echo"La prenotazione e` stata inserita con successo<BR>";
+      }
+    }
+    else subtitle("nessun piatto selezionato");
+  };
+
+  echo"<form method='POST' action='crea_pren.php' border='0'>";
+  
+  $h=array("Antipasti","Primi","Secondi","Contorni","Dolci","PiattiSpeciali","Bevande");
+  $s=array("Antipasti","Primi","Secondi","Contorni","Dolci","Piatti Speciali","Bevande");
+  
+  echo"Inserisci il numero di persone:<input type='number' name='npers' min=1 size='3' value='1'>";
+  $ardate=mysql_fetch_array(mysql_query("select curdate()",$conn));
+  $date=$ardate[0];
+  echo"     Inserisci la data (nel formato MM/GG/AAAA): <input type='date' name='sday' min='$date' value='$date'><BR>";
+  
+  table_start_NH(); 
+  for ($i=0; $i<=6; $i++) {
+    $name=$s[$i];
+    $table=$h[$i];
+    echo "<tr><th colspan='3'>$name </th></tr>";
+    $q="select p.CodPiatto, p.Nome, p.Costo from Piatti p Join $table t where p.CodPiatto=t.Codice";
+    $ris=mysql_query($q,$conn);
+    $num_righe=mysql_num_rows($ris);
+    if(!$num_righe)
+      echo"<tr><td>Non ci sono $name</td></tr>";
+    else{
+      while($row=mysql_fetch_array($ris)){
+	echo"<tr><td>".$row["Nome"]."</td><td>".number_format($row["Costo"],2)."€</td>";
+	echo"<input type='hidden' name='ids[]' value='$row[CodPiatto]'>";
+	echo"<td><input type='number' name='nporz[]' min=0 size='3' value='0'></td>";
+	echo"</td></tr>";
+      }
+    }
+  }
+  table_end();
+  if(!isset($_POST['submit']) || !isset($_POST['Cod'])){
+    echo"<input type='submit' name='submit' value='Procedi'>";
+    echo"<input type='reset' value='Cancella'>";
+  }
+  echo"</form>";
+  back("operazioni.php");
+  page_end();
+  }
+  else header("Location: home.php")
+?>

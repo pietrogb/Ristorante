@@ -1,0 +1,15 @@
+LOAD DATA LOCAL INFILE 'Piatti.txt' INTO TABLE Piatti;
+LOAD DATA LOCAL INFILE 'Antipasti.txt' INTO TABLE Antipasti;
+LOAD DATA LOCAL INFILE 'Primi.txt' INTO TABLE Primi;
+LOAD DATA LOCAL INFILE 'Bevande.txt' INTO TABLE Bevande;
+LOAD DATA LOCAL INFILE 'Contorni.txt' INTO TABLE Contorni;
+LOAD DATA LOCAL INFILE 'Dolci.txt' INTO TABLE Dolci;
+LOAD DATA LOCAL INFILE 'Secondi.txt' INTO TABLE Secondi;
+LOAD DATA LOCAL INFILE 'PiattiSpeciali.txt' INTO TABLE PiattiSpeciali;
+LOAD DATA LOCAL INFILE 'Clienti.txt' INTO TABLE Clienti;
+LOAD DATA LOCAL INFILE 'Utenti.txt' INTO TABLE Utenti;
+LOAD DATA LOCAL INFILE 'Prenotazioni.txt' INTO TABLE Prenotazioni;
+LOAD DATA LOCAL INFILE 'PrenotazioniPiatti.txt' INTO TABLE PrenotazioniPiatti;
+LOAD DATA LOCAL INFILE 'Ricevute.txt' INTO TABLE Ricevute;
+LOAD DATA LOCAL INFILE 'Prenotazioni2.txt' INTO TABLE Prenotazioni;
+LOAD DATA LOCAL INFILE 'PrenotazioniPiatti2.txt' INTO TABLE PrenotazioniPiatti;
